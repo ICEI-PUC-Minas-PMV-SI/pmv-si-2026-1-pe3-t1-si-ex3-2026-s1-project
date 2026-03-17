@@ -13,7 +13,7 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 * Arthur Rocha Furtado
 * Bruna Ribeiro Perez
 * Igor Rosa da Silva
-* Nome completo do aluno 4
+* Lucas Geraldi Freitas
 * Nome completo do aluno 5
 * Nome completo do aluno 6
 
