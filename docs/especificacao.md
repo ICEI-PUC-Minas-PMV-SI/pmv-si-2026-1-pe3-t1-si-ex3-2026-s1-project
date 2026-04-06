@@ -1,57 +1,69 @@
 # 3. DOCUMENTO DE ESPECIFICAÇÃO DE REQUISITOS DE SOFTWARE
 
-Nesta parte do trabalho você deve detalhar a documentação dos requisitos do sistema proposto de acordo com as seções a seguir. Ressalta-se que aqui é utilizado como exemplo um sistema de gestão de cursos de aperfeiçoamento.
+Constarão a seguir os detalhamentos dos requisitos do sistema 
 
 ## 3.1 Objetivos deste documento
-Descrever e especificar as necessidades da Coordenação do Curso de Sistemas de Informação da PUC Minas que devem ser atendidas pelo projeto SCCA – Sistema de Cadastro de Cursos de Aperfeiçoamento.
+Descrever e especificar as necessidades dos Usuários que utilizarão o nosso sistema de auxílio a gerenciamento de tarefas com ênfase em design voltado a neurodivergentes. 
 
 ## 3.2 Escopo do produto
 
 ### 3.2.1 Nome do produto e seus componentes principais
-O produto será denominado SCCA – Sistema de Cadastro de Cursos de Aperfeiçoamento. Ele terá somente um componente (módulo) com os devidos elementos necessários à gestão de cursos.
+O produto será um Sistema de Gerenciamento de Tarefas e Metas com o nome “(Ainda não decidimos)”, ele será composto por três componentes (módulos), com elementos necessários à criação de metas / checklists diários, projetos a longo prazo e atividades semanais para realizar estes projetos. 
 
 ### 3.2.2 Missão do produto
-Gerenciar informações sobre a oferta de cursos de aperfeiçoamento, gerenciar a composição das turmas, alunos, professores e matrículas. 
+Disponibilizar uma plataforma inclusiva para todos os indivíduos, porém com foco em pessoas que possuem TDAH, para auxiliar na parte de organização e construção de rotina e metas a longo prazo. 
 
 ### 3.2.3 Limites do produto
-O SCCA não fornece nenhuma forma de avaliação de alunos, pagamento de parcelas do curso, pagamento a professore e agendamentos. O SCCA não contempla o atendimento a vários cursos de Sistemas de Informação de outras unidades da PUC Minas.
+O Sistema de Gerenciamento de Tarefas não terá sugestões de tratamento e medicação, será apenas uma ferramenta de auxílio para os usuários. Ele deve procurar um profissional qualificado para avaliar qual será a melhor estratégia de tratamento já que ele é muito individualizado nos casos de TDAH. 
 
 ### 3.2.4 Benefícios do produto
 
 | # | Benefício | Valor para o Cliente |
 |--------------------|------------------------------------|----------------------------------------|
-|1	| Facilidade no cadastro de dados |	Essencial |
+|1	| Facilidade na criação e remoção de tarefas diárias  |	Essencial |
 |2 | Facilidade na recuperação de informações | Essencial | 
 |3 | Segurança no cadastro de matrículas | Essencial | 
-|4	| Melhoria na comunicação com os alunos	| Recomendável | 
+|4	| Melhoria na comunicação com os alunos	| Essencial | 
+|5	| Engajamento por gamificação 	| Essencial |
+|6	| Desenvolvimento de rotina / sistema de engajamento e incentivo para login diário 	| Essencial |
+|7	| Área de artigos / conscientização sobre TDAH 	| Médio |
+|8	| Fórum de usuários para registros diários e comunicação / criação de senso de comunidade 	| Alto |
 
 ## 3.3 Descrição geral do produto
 
 ### 3.3.1 Requisitos Funcionais
 
-| Código | Requisito Funcional (Funcionalidade) | Descrição |
-|--------------------|------------------------------------|----------------------------------------|
-| RF1 | Gerenciar Curso de Aperfeiçoamento |	Processamento de Inclusão, Alteração, Exclusão e Consulta de Cursos de Aperfeiçoamento |
-| RF2 |	Gerenciar Professor	| Processamento de Inclusão, Alteração, Exclusão e Consulta de professores |
-| RF3	| Gerenciar Matrícula |	Processamento de Inclusão, Alteração, Exclusão e Consulta de Matrículas de alunos em Cursos de Aperfeiçoamento |
-| ... |	...	| ... |
+| Código | Requisito Funcional | Descrição |
+|--------|--------------------|----------|
+| RF1 | Gerenciar Usuários | Processamento de Criação, Exclusão e Edição de Usuários. |
+| RF2 | Gerenciar tarefas | Processamento de Criação, Exclusão, Consulta e Conclusão de tarefas. |
+| RF3 | Acumular pontos e experiência | Processamento para adicionar os pontos e experiência ao personagem após finalizar tarefas. |
+| RF4 | Subir de Nível | Processamento para aumentar o nível do personagem após alcançar a quantidade de experiência necessária. |
+| RF5 | Gerenciar hábitos | Processamento de Inclusão, Alteração, Consulta de tarefas recorrentes. |
+| RF6 | Administração de pontos acumulados | Sistema para utilização dos pontos em recompensas. |
+| RF7 | Personalizar o avatar | Processamento de alteração do visual do avatar: vestuário, acessórios, background, pets. |
+| RF8 | Gerenciamento de Agenda | Processamento de inclusão e alteração de prazos nas tarefas com prazo limite, personalização de tarefas "extras" fora da rotina. |
+| RF9 | Consultar tarefas | Processamento de consulta de tarefas por palavra-chave ou nome. |
 
 ### 3.3.2 Requisitos Não Funcionais
 
-| Código | Requisito Não Funcional (Restrição) |
-|--------------------|------------------------------------|
-| RNF1 | O ambiente operacional a ser utilizado é o Windows XP. |
-| RNF2 | O sistema deverá executar em um computador configurado com uma impressora de tecnologia laser ou de jato de tinta, a ser usada para impressão dos relatórios. |
-| RNF3 |	Segurança	O produto deve restringir o acesso por meio de senhas individuais para o usuário. |
-| ... |	... |	... |
+| Código | Descrição |
+|--------|----------|
+| RNF1 | Produto terá restrição de acesso às contas individuais por meio de login e senha. |
+| RNF2 | O sistema terá interface intuitiva, facilitando a utilização e navegação. |
+| RNF3 | O sistema contará com tempo de resposta de no máximo 500ms em condições normais de operação. |
+| RNF4 | O ambiente operacional será Windows, com compatibilidade para os navegadores Google Chrome, Brave, Firefox, Microsoft Edge e Safari. |
+| RNF5 | O sistema deverá ter um uptime de >99,9% em condições normais. |
+| RNF6 | O sistema terá conformidade com a LGPD para armazenamento de dados. |
+| RNF7 | A arquitetura do código permitirá escalabilidade horizontal para suprir aumento de tráfego futuro. |
+| RNF8 | O sistema deverá suportar "X" usuários simultâneos sem degradação no tempo de resposta. |
 
 ### 3.3.3 Usuários 
 
-| Ator | Descrição |
-|--------------------|------------------------------------|
-| Coordenador |	Usuário gerente do sistema responsável pelo cadastro e manutenção de cursos de aperfeiçoamento. Possui acesso geral ao sistema. |
-| Secretaria |	Usuário responsável por registros de alunos, professores, turmas e gerência de matrículas. |
-| ... |	... |	... |
+| # | Ator | Definição |
+|---|------|----------|
+| 1 | Administrador | Usuário responsável por testes de novas features, aprovação de parceiros e moderação dos fóruns / sistemas de comunicação entre usuários. |
+| 2 | Usuário Comum | Usuário responsável por cadastrar tarefas, definir prioridades e concluir atividades. Pode também personalizar seu avatar, visualizar recompensas, interagir com o sistema de pontuação, melhorando sua organização e produtividade. |
 
 ## 3.4 Modelagem do Sistema
 
@@ -64,52 +76,189 @@ Como observado no diagrama de casos de uso da Figura 1, a secretária poderá ge
  
 ### 3.4.2 Descrições de Casos de Uso
 
-Cada caso de uso deve ter a sua descrição representada nesta seção. Exemplo:
+Descrições de casos de uso
 
-#### Gerenciar Professor (CSU01)
+## Casos de Uso
 
-Sumário: A Secretária realiza a gestão (inclusão, remoção, alteração e consulta) dos dados sobre professores.
+---
 
-Ator Primário: Secretária.
+### Cadastro de Usuário (CSU01)
 
-Ator Secundário: Coordenador.
+**Sumário:** O Usuário realiza o cadastro na plataforma, preenchendo as credenciais para acesso.  
 
-Pré-condições: A Secretária deve ser validada pelo Sistema.
+**Ator Primário:** Usuário Comum  
+**Ator Secundário:** Nenhum  
 
-Fluxo Principal:
+**Pré-condições:** O Usuário deve possuir acesso ao sistema e não estar previamente cadastrado.  
 
-1) 	A Secretária requisita manutenção de professores.
-2) 	O Sistema apresenta as operações que podem ser realizadas: inclusão de um novo professor, alteração de um professor, a exclusão de um professor e a consulta de dados de um professor.
-3) 	A Secretária seleciona a operação desejada: Inclusão, Exclusão, Alteração ou Consulta, ou opta por finalizar o caso de uso.
-4) 	Se a Secretária desejar continuar com a gestão de professores, o caso de uso retorna ao passo 2; caso contrário o caso de uso termina.
+**Fluxo Principal:**
+1. O Usuário acessa a tela inicial e solicita o cadastro.  
+2. O Sistema apresenta um formulário de cadastro.  
+3. O Usuário preenche nome, e-mail e senha.  
+4. O Sistema valida os dados informados.  
+5. O Sistema cria a conta e redireciona o Usuário para a tela inicial.  
 
-Fluxo Alternativo (3): Inclusão
+**Fluxo Alternativo (E-mail já cadastrado):**
+- O Sistema identifica que o e-mail já está em uso.  
+- O Sistema exibe mensagem de erro.  
+- O Usuário pode inserir outro e-mail ou redefinir senha.  
 
-a)	A Secretária requisita a inclusão de um professor. <br>
-b)	O Sistema apresenta uma janela solicitando o CPF do professor a ser cadastrado. <br>
-c)	A Secretária fornece o dado solicitado. <br>
-d)	O Sistema verifica se o professor já está cadastrado. Se sim, o Sistema reporta o fato e volta ao início; caso contrário, apresenta um formulário em branco para que os detalhes do professor (Código, Nome, Endereço, CEP, Estado, Cidade, Bairro, Telefone, Identidade, Sexo, Fax, CPF, Data do Cadastro e Observação) sejam incluídos. <br>
-e)	A Secretária fornece os detalhes do novo professor. <br>
-f)	O Sistema verifica a validade dos dados. Se os dados forem válidos, inclui o novo professor e a grade listando os professores cadastrados é atualizada; caso contrário, o Sistema reporta o fato, solicita novos dados e repete a verificação. <br>
+**Fluxo Alternativo (Dados inválidos):**
+- O Sistema identifica campos inválidos.  
+- O Sistema destaca os campos incorretos.  
 
-Fluxo Alternativo (3): Remoção
+**Pós-condições:** Conta criada com sucesso.  
 
-a)	A Secretária seleciona um professor e requisita ao Sistema que o remova. <br>
-b)	Se o professor pode ser removido, o Sistema realiza a remoção; caso contrário, o Sistema reporta o fato. <br>
+---
 
-Fluxo Alternativo (3): Alteração
+### Gerenciar Tarefas (CSU02)
 
-a)	A Secretária altera um ou mais dos detalhes do professor e requisita sua atualização. <br>
-b)	O Sistema verifica a validade dos dados e, se eles forem válidos, altera os dados na lista de professores, caso contrário, o erro é reportado. <br>
- 
-Fluxo Alternativo (3): Consulta
+**Sumário:** O Usuário realiza a gestão das tarefas.  
 
-a)	A Secretária opta por pesquisar pelo nome ou código e solicita a consulta sobre a lista de professores. <br>
-b)	O Sistema apresenta uma lista professores. <br>
-c)	A Secretária seleciona o professor. <br>
-d)	O Sistema apresenta os detalhes do professor no formulário de professores. <br>
+**Ator Primário:** Usuário Comum  
+**Pré-condições:** Usuário autenticado  
 
-Pós-condições: Um professor foi inserido ou removido, seus dados foram alterados ou apresentados na tela.
+**Fluxo Principal:**
+1. Usuário acessa o menu de tarefas.  
+2. Sistema exibe opções: incluir, alterar, excluir, consultar.  
+3. Usuário escolhe a ação desejada.  
+
+**Fluxo Alternativo (Inclusão):**
+- Usuário cria nova tarefa.  
+- Preenche título, descrição e prioridade.  
+- Sistema valida e salva.  
+
+**Fluxo Alternativo (Alteração):**
+- Usuário seleciona tarefa.  
+- Altera dados.  
+- Sistema atualiza.  
+
+**Fluxo Alternativo (Exclusão):**
+- Usuário seleciona tarefa.  
+- Sistema pede confirmação.  
+
+**Fluxo Alternativo (Consulta):**
+- Usuário busca por nome ou palavra-chave.  
+
+**Pós-condições:** Tarefa gerenciada com sucesso.  
+
+---
+
+### Concluir Tarefas (CSU03)
+
+**Sumário:** O Usuário conclui tarefas.  
+
+**Fluxo Principal:**
+1. Usuário acessa lista de tarefas.  
+2. Marca tarefa como concluída.  
+3. Sistema atualiza status.  
+4. Sistema adiciona pontos.  
+
+**Pós-condições:** Tarefa concluída e pontos adicionados.  
+
+---
+
+### Sistema de Pontuação (CSU04)
+
+**Sumário:** Sistema atribui pontos ao Usuário.  
+
+**Fluxo Principal:**
+1. Sistema identifica tarefa concluída.  
+2. Verifica prioridade.  
+3. Calcula pontos.  
+4. Atualiza perfil do usuário.  
+
+---
+
+### Sistema de Níveis (CSU05)
+
+**Sumário:** Sistema gerencia evolução de nível.  
+
+**Fluxo Principal:**
+1. Sistema verifica pontos.  
+2. Calcula progresso.  
+3. Atualiza nível.  
+4. Libera recompensas.  
+
+---
+
+### Sistema de Recompensas (CSU06)
+
+**Sumário:** Usuário troca pontos por recompensas.  
+
+**Fluxo Principal:**
+1. Usuário acessa loja.  
+2. Escolhe recompensa.  
+3. Sistema verifica pontos.  
+4. Realiza troca.  
+
+**Fluxo Alternativo:**
+- Pontos insuficientes → sistema informa erro.  
+
+---
+
+### Personalizar Avatar (CSU07)
+
+**Sumário:** Usuário personaliza avatar.  
+
+**Fluxo Principal:**
+1. Usuário acessa personalização.  
+2. Sistema mostra itens disponíveis.  
+3. Usuário seleciona item.  
+4. Sistema aplica alteração.  
+
+---
+
+### Criar Subtarefa (CSU08)
+
+**Sumário:** Usuário divide tarefas em subtarefas.  
+
+**Fluxo Principal:**
+1. Usuário seleciona tarefa.  
+2. Escolhe adicionar subtarefa.  
+3. Preenche descrição.  
+4. Sistema salva subtarefa.  
+
+---
+
+### Definir Prioridade (CSU09)
+
+**Sumário:** Usuário define prioridade da tarefa.  
+
+**Fluxo Principal:**
+1. Usuário seleciona tarefa.  
+2. Escolhe prioridade (baixa, média, alta).  
+3. Sistema salva.  
+
+---
+
+### Definir Prazo (CSU10)
+
+**Sumário:** Usuário define prazo da tarefa.  
+
+**Fluxo Principal:**
+1. Usuário seleciona tarefa.  
+2. Define nova data.  
+3. Sistema atualiza.  
+
+**Fluxo Alternativo:**
+- Data inválida → sistema exibe erro.  
+
+---
+
+### Buscar Tarefas (CSU11)
+
+**Sumário:** Usuário busca tarefas.  
+
+**Fluxo Principal:**
+1. Usuário digita palavra-chave.  
+2. Sistema realiza busca.  
+3. Exibe resultados.  
+
+**Fluxo Alternativo:**
+- Nenhuma tarefa encontrada.  
+
+---
 
 ### 3.4.3 Diagrama de Classes 
 
