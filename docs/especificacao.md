@@ -266,16 +266,26 @@ A Figura 2 mostra o diagrama de classes do sistema. A Matrícula deve conter a i
 
 #### Figura 2: Diagrama de Classes do Sistema.
  
-![image](https://github.com/user-attachments/assets/abc7591a-b46f-4ea2-b8f0-c116b60eb24e)
+![image]([Diagrama de Classes](docs/diagrama_classes.png))
 
 
 ### 3.4.4 Descrições das Classes 
 
+## 3.4.4 Descrições das Classes
+
+## 3.4.4 Descrições das Classes
+
 | # | Nome | Descrição |
-|--------------------|------------------------------------|----------------------------------------|
-| 1	|	Aluno |	Cadastro de informações relativas aos alunos. |
-| 2	| Curso |	Cadastro geral de cursos de aperfeiçoamento. |
-| 3 |	Matrícula |	Cadastro de Matrículas de alunos nos cursos. |
-| 4 |	Turma |	Cadastro de turmas.
-| 5	|	Professor |	Cadastro geral de professores que ministram as disciplinas. |
-| ... |	... |	... |
+|---|------|-----------|
+| 1 | Usuario | Classe base que representa qualquer usuário do sistema, contendo as informações de autenticação e identificação. |
+| 2 | UsuarioComum | Usuário final da plataforma, responsável por gerenciar tarefas, acumular pontos e interagir com o sistema de gamificação. |
+| 3 | Administrador | Usuário com privilégios elevados, responsável por moderar o fórum, aprovar parceiros e testar novas funcionalidades. |
+| 4 | Tarefa | Representa uma atividade criada pelo usuário, com título, descrição, prioridade, prazo e status de conclusão. |
+| 5 | Subtarefa | Divisão de uma tarefa complexa em etapas menores, facilitando a execução gradual da atividade. |
+| 6 | Habito | Tarefa recorrente configurada pelo usuário, com frequência definida e controle de sequência (streak). |
+| 7 | Agenda | Gerencia os prazos e eventos associados às tarefas, permitindo organização temporal das atividades. |
+| 8 | Pontuacao | Registra os pontos e experiência (XP) ganhos pelo usuário ao concluir tarefas, alimentando o sistema de níveis. |
+| 9 | Nivel | Representa a progressão do usuário na plataforma, definindo os requisitos de XP e as recompensas desbloqueadas. |
+| 10 | Recompensa | Item disponível na loja da plataforma, resgatável com os pontos acumulados pelo usuário. |
+| 11 | Avatar | Representa a identidade visual do usuário, personalizável com vestuário, acessórios, background e pets. |
+| 12 | PostForum | Publicação feita pelo usuário no fórum da comunidade, promovendo troca de experiências entre os membros. |
