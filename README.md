@@ -14,8 +14,6 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 * Bruna Ribeiro Perez
 * Igor Rosa da Silva
 * Lucas Geraldi Freitas
-* Nome completo do aluno 5
-* Nome completo do aluno 6
 
 ## Orientador
 
